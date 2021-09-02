@@ -41,7 +41,7 @@ a:hover {
   filter: brightness(80%);
 }
 
-header > h1 {
+header > h1, header > h2 {
   text-align: center;
 }
 
@@ -90,4 +90,10 @@ tbody td {
 footer {
   margin-top: 1em;
   border-top: 1px solid var(--text-color);
+}
+
+.ds2 {
+  display: block;
+  margin: 0 auto;
+  border: none;
 }
