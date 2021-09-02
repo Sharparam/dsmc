@@ -370,14 +370,7 @@ const calculateBloodborne = level => {
   const summonMax = l => cl(l + (20 + floor(0.2 * l)));
   const invadeMin = l => cl(l - (20 + floor(0.2 * l)));
   const invadeMax = l => cl(l + (10 + floor(0.1 * l)));
-  // const summonHostMin = cl(floor(0.8 * level - 20));
-  // const summonHostMax = cl(floor(1.2 * level + 20));
-  // const summonPhantomMin = cl(floor((level - 20) / 1.2));
-  // const summonPhantomMax = cl(floor((level + 20) / 0.8));
-  // const invadeHostMin = cl(floor(0.8 * level - 20));
-  // const invadeHostMax = cl(floor(1.1 * level + 10));
-  // const invadePhantomMin = cl(floor((level - 10) / 1.1));
-  // const invadePhantomMax = cl(floor(((level + 20) / 0.8)));
+
   const summonHostMin = summonMin(level);
   const summonHostMax = summonMax(level);
   const summonPhantomMin = cl(calculateMin(level, summonMax, BB_MAX_LEVEL));
