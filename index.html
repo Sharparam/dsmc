@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Dark Souls Matchmaking Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Soulsborne Matchmaking Calculator (SMC)</h1>
+      </header>
+      <article>
+        <label for="level">Your level:</label>
+        <input id="level" name="level" type="number" value="1" min="1" size="4">
+        <label for="weapon-level">Your weapon level:</label>
+        <input id="weapon-level" name="weapon-level" type="number" value="0" min="0" max="15" size="3">
+        <p>Weapon level range is shown in brackets ([]) in the tables.</p>
+        <div class="tables">
+          <table class="des">
+            <thead>
+              <tr>
+                <th scope="col" colspan="3" class="game">Demon's Souls</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th scope="col" class="host" title="Or be invaded by">Can summon</th>
+                <th scope="col" class="phantom" title="Or invade">Can be summoned by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bres">
+                <th scope="row">
+                  <abbrev title="Blue Eye Stone">BluES</abbrev>,
+                  <abbrev title="Red Eye Stone">RES</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+              <tr class="bes">
+                <th scope="row">
+                  <abbrev title="Black Eye Stone">BlaES</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+              <tr class="tom">
+                <th scope="row">
+                  <abbrev title="The Old Monk">TOM</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="desr">
+            <thead>
+              <tr>
+                <th scope="col" colspan="3" class="game">Demon's Souls Remake</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th scope="col" class="host" title="Or be invaded by">Can summon</th>
+                <th scope="col" class="phantom" title="Or invade">Can be summoned by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bres">
+                <th scope="row">
+                  <abbrev title="Blue Eye Stone">BluES</abbrev>,
+                  <abbrev title="Red Eye Stone">RES</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+              <tr class="bes">
+                <th scope="row">
+                  <abbrev title="Black Eye Stone">BlaES</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+              <tr class="tom">
+                <th scope="row">
+                  <abbrev title="The Old Monk">TOM</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tables">
+          <table class="das">
+            <thead>
+              <tr>
+                <th scope="col" colspan="3" class="game">Dark Souls<sup>1</sup></th>
+              </tr>
+              <tr>
+                <th></th>
+                <th scope="col" class="host" title="Or be invaded by">Can summon</th>
+                <th scope="col" class="phantom" title="Or invade">Can be summoned by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="wss">
+                <th scope="row">
+                  <abbrev title="White Sign Soapstone">WSS</abbrev>,
+                  <abbrev title="Eye of Death">EoD</abbrev>,
+                  <abbrev title="Dragon Eye">DE</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+              <tr class="rss">
+                <th scope="row">
+                  <abbrev title="Red Sign Soapstone">RSS</abbrev>,
+                  <abbrev title="Forest Hunter">FH</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+              <tr class="reo">
+                <th scope="row">
+                  <abbrev title="(Cracked) Red Eye Orb">(C)REO</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+              <tr class="beo">
+                <th scope="row">
+                  <abbrev title="Blue Eye Orb">BEO</abbrev>,
+                  <abbrev title="Darkmoon Blade">DB</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="dsr">
+            <thead>
+              <tr>
+                <th scope="col" colspan="3" class="game">Dark Souls: Remastered</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th scope="col" class="host" title="Or be invaded by">Can summon</th>
+                <th scope="col" class="phantom" title="Or invade">Can be summoned by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="summon">
+                <th scope="row">
+                  <abbrev title="White Sign Soapstone">WSS</abbrev>,
+                  <abbrev title="Eye of Death">EoD</abbrev>,
+                  <abbrev title="Dragon Eye">DE</abbrev>,
+                  <abbrev title="Red Sign Soapstone">RSS</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+              </tr>
+              <tr class="invade">
+                <th scope="row">
+                  <abbrev title="(Cracked) Red Eye Orb">(C)REO</abbrev>,
+                  <abbrev title="Blue Eye Orb">BEO</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+              </tr>
+              <tr class="ring">
+                <th scope="row">
+                  <abbrev title="Forest Hunter">FH</abbrev>,
+                  <abbrev title="Darkmoon Blade">DB</abbrev>
+                </th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tables">
+          <table class="ds3">
+            <thead>
+              <tr>
+                <th scope="col" colspan="3" class="game">Dark Souls 3</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th scope="col" class="host" title="Or be invaded by">Can summon</th>
+                <th scope="col" class="phantom" title="Or invade">Can be summoned by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="sign">
+                <th>Sign summons</th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+              </tr>
+              <tr class="wotb">
+                <th>Way of the Blue</th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+              </tr>
+              <tr class="dark-spirit">
+                <th>Dark Spirit</th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+              </tr>
+              <tr class="mm">
+                <th>Mound Maker</th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+              </tr>
+              <tr class="covenant">
+                <th>Covenant</th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                  [<span class="min wl"></span>&nbsp;-&nbsp;<span class="max wl"></span>]
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="bb">
+            <thead>
+              <tr>
+                <th scope="col" colspan="3" class="game">Bloodborne</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th scope="col" class="host" title="Or be invaded by">Can summon</th>
+                <th scope="col" class="phantom" title="Or invade">Can be summoned by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="summon">
+                <th>Small Resonant Bell</th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+              <tr class="invade">
+                <th>Sinister Resonant Bell</th>
+                <td class="host">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+                <td class="phantom">
+                  <span class="min level"></span>&nbsp;-&nbsp;<span class="max level"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <sup>1</sup>&nbsp;Weapon level is ignored in Demon's Souls and the original Dark Souls.
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>
+        Copyright &copy; 2021 by
+        <a href="https://sharparam.com">Adam Hellberg</a>.
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
