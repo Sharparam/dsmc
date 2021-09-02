@@ -71,9 +71,6 @@ th.host, th.phantom {
   font-size: small;
 }
 
-thead tr:last-child th:not(:first-child) {
-  border-bottom: 1px solid var(--text-color);
-}
 
 tbody tr:nth-child(even) {
   background: var(--row-alt-background-color);
