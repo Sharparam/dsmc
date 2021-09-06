@@ -27,6 +27,13 @@ const DS3_WL_MAP = {
   [10]: [8, 10]
 };
 
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+const max = (...values) => Math.max(...values);
+const floor = num => Math.floor(num);
+const ceil = num => Math.ceil(num);
+
 const clamp = (num, min, max) => {
   if (num < min) {
     return min;
@@ -65,6 +72,15 @@ class DSR {
   static clampWeaponLevel(level) {
     return clamp(level, 0, DSR_MAX_WEAPON_LEVEL);
   }
+
+  // Source: https://www.reddit.com/r/darksouls/comments/8s2n85/i_thoroughly_tested_soul_level_and_weapon_level/e0wwm9o/
+  static round(num) {
+    if (num < 1.0) {
+      return floor(num + 0.5);
+    }
+
+    return floor(num + 0.4);
+  }
 }
 
 class DS3 {
@@ -83,9 +99,6 @@ class BB {
   }
 }
 
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
-
 const getLevel = () => {
   const lvl = parseInt($('#level').value, 10);
   return lvl === NaN ? 1 : lvl;
@@ -95,10 +108,6 @@ const getWeaponLevel = () => {
   const wl = parseInt($('#weapon-level').value, 10);
   return wl === NaN ? 0 : wl;
 };
-
-const max = (...values) => Math.max(...values);
-const floor = num => Math.floor(num);
-const ceil = num => Math.ceil(num);
 
 const calculateMax = (level, formula, max) => {
   for (let x = max; x > 0; x--) {
@@ -237,12 +246,12 @@ const calculateDarkSoulsRemastered = (level, weaponLevel) => {
   weaponLevel = cwl(weaponLevel);
   const wlMin = wl => cwl(wl - (wl <= 9 ? 5 : 6));
   const wlMax = wl => cwl(wl + (wl <= 3 ? 5 : 6));
-  const summonMin = x => cl(x - (10 + floor(0.1 * x)));
-  const summonMax = x => cl(x + (10 + floor(0.1 * x)));
-  const invadeMin = x => cl(x - floor(0.1 * x));
-  const invadeMax = x => cl(x + (20 + floor(0.1 * x)));
-  const ringMin = x => cl(x - (20 + floor(0.2 * x)));
-  const ringMax = x => cl(x + floor(0.1 * x));
+  const summonMin = x => cl(x - (10 + DSR.round(0.1 * x)));
+  const summonMax = x => cl(x + (10 + DSR.round(0.1 * x)));
+  const invadeMin = x => cl(x - DSR.round(0.1 * x));
+  const invadeMax = x => cl(x + (20 + DSR.round(0.1 * x)));
+  const ringMin = x => cl(x - (20 + DSR.round(0.2 * x)));
+  const ringMax = x => cl(x + DSR.round(0.1 * x));
   const summonHostMin = summonMin(level);
   const summonHostMax = summonMax(level);
   const summonPhantomMin = cl(calculateMin(level, summonMax, DSR_MAX_LEVEL));
